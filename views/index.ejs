@@ -6,6 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello Everyone</h1>
+    <h1>Hello Everyone</h1> 
+    <a href="/newStaff"><button>New newStaff</button></a>
+    <% for(let stff of result){ %>
+        <div>
+            <p>Name : <%= stff.name %></p>
+            <p>Position : <%= stff.position %></p>
+            <p>Gender : <%= stff.sex %></p>
+            <p>Email : <%= stff.email %></p>
+            <form action="/newStaff/<%= stff.staff_no%>?_method=DELETE" method="post">
+                <button>Delete</button>
+            </form>
+        </div>
+    <% } %>
 </body>
 </html>
